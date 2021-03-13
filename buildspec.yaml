@@ -22,10 +22,6 @@ phases:
       - echo Build completed on `date`
     finally:
       - echo  This always runs even if the post_build command fails
-  run:
-    commands:
       - echo Entered the run phase...
       - cd src/web/app
       - mvn jetty:run
-    finally:
-      - echo  This always runs even if the run command fails
