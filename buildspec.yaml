@@ -23,5 +23,4 @@ phases:
     finally:
       - echo  This always runs even if the post_build command fails
       - echo Entered the run phase...
-      - cd src/web/app
-      - mvn jetty:run
+      - pwd
