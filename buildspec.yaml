@@ -30,4 +30,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'web/app'
+  base-directory: 'src/web/app'
