@@ -21,7 +21,7 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
-      - chmod +x ../install.sh; ../install
+      - chmod +x ../install.sh; ../install.sh
     finally:
       - echo  This always runs even if the post_build command fails
       - echo Entered the run phase...
