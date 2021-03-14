@@ -2,4 +2,4 @@
 echo "Setting up NGINX..." 
 sudo wget https://github.com/alnwoks/geostore/tree/master/nginx/default.conf
 sudo mv default.conf /etc/nginx/nginx.conf
-sudo ngimx -s reload
+sudo nginx -s reload
