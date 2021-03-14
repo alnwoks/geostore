@@ -24,5 +24,6 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'src/web/app'
+    - 'src/web/app/**'
+    - 'scripts/**'
+  

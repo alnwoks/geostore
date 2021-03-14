@@ -8,9 +8,9 @@ sudo apt-get install -y default-jdk
 sudo apt-get install -y wget
 
 echo "Setting up NGINX..." 
-sudo wget -o https://github.com/alnwoks/geostore/tree/master/nginx/default.conf
+sudo wget https://github.com/alnwoks/geostore/tree/master/nginx/default.conf
 sudo mv default.conf /etc/nginx/nginx.conf
-sudo ngimx -s reload
+sudo nginx -s reload
 
 echo "Setting up AWS Code deploy agent..."
 sudo apt-get install -y ruby
