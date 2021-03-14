@@ -26,7 +26,8 @@ phases:
       - echo Entered the run phase...
       - cd web/app
       - ls
-  artifacts:
-    files:
-      - '**/*'
-    basedirectory: 'src/web/app'
+
+artifacts:
+  files:
+    - '**/*'
+  basedirectory: 'web/app'
