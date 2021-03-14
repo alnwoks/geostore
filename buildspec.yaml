@@ -4,24 +4,27 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
+      - d1=`date +%s`
       - apt-get update -y
       - apt-get install -y maven
       - apt-get install -y default-jdk
     finally:
-      - echo This always runs even if the update or install command fails 
+      - d2=`date +%s`
+      - echo Install phase took $(date --date=@$(($d2 - $d1)) +'%s seconds') 
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
+      - d1=`date +%s`
       - cd src
       - mvn clean install
     finally:
-      - echo This always runs even if the install command fails
+      - d2=`date +%s`
+      - echo Build phase took $(date --date=@$(($d2 - $d1)) +'%s seconds') 
   post_build:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
-      - chmod +x ../install.sh; ../install.sh
     finally:
       - echo  This always runs even if the post_build command fails
       - echo Entered the run phase...
