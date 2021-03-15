@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Build Project"
 cd /home/ubuntu/src
-sudo mvn -DskipTest clean install
+sudo mvn -DskipTests clean install
