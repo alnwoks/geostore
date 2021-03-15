@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "Build Project"
 cd /home/ubuntu/src
-sudo find ../ -type f -exec sed -i -e 's/1.7-SNAPSHOT/1.6.0/g' {} \;
+#sudo find ../ -type f -exec sed -i -e 's/1.7-SNAPSHOT/1.6.0/g' {} \;
 sudo mvn -DskipTests clean install
