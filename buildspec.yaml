@@ -17,16 +17,12 @@ phases:
       - echo Build started on `date`
       - d1=`date +%s`
       - cd src
-      - mvn -DskipTest clean install
+      - mvn -DskipTest clean install #TOMODIFY
     finally:
       - d2=`date +%s`
       - echo Build phase took $(date --date=@$(($d2 - $d1)) +'%M minutes, %s seconds') 
 
 artifacts:
   files:
-    - '/root/.m2'       #build respository
-    - 'src/web/app/**'  #main app folder
-    - 'scripts/**'      #scripts folder
-    - 'nginx/**'        #NGINX folder
-    - 'appspec.yml'     #APPSPEC for codedeploy service
+    - '**/*'
   
