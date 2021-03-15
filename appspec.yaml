@@ -5,16 +5,16 @@ files:
     destination: /home/ubuntu/
 hooks:
   BeforeInstall:
-    - location: /home/ubuntu/scripts/install_dependencies.sh
-    - location: /home/ubuntu/scripts/setup_nginx.sh
+    - location: scripts/install_dependencies
+    - location: scripts/setup_nginx
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: /home/ubuntu/scripts/run_app.sh
-    - location: /home/ubuntu/scripts/start_server.sh
+    - location: scripts/run_app
+    - location: scripts/start_server
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: /home/ubuntu/scripts/stop_server.sh
+    - location: scripts/stop_server
       timeout: 300
       runas: root
