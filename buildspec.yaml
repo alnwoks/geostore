@@ -27,5 +27,6 @@ artifacts:
     - '/root/.m2'       #build respository
     - 'src/web/app/**'  #main app folder
     - 'scripts/**'      #scripts folder
+    - 'nginx/**'        #NGINX folder
     - 'appspec.yml'     #APPSPEC for codedeploy service
   
