@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Running Application..."
-cd src/web/app/
-sudo mvn run:jetty
+cd /home/ubuntu/src/web/app/
+sudo mvn jetty:run
