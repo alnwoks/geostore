@@ -11,15 +11,15 @@ hooks:
   Install:
     - location: scripts/install
       timeout: 3000
-      runas: ubuntu
+      runas: root
   AfterInstall:
     - location: scripts/setup_nginx    
       timeout: 300
-      runas: ubuntu
+      runas: root
   ApplicationStart:
     - location: scripts/run_app
       timeout: 3000
-      runas: ubuntu
+      runas: root
     - location: scripts/start_server
       timeout: 300
       runas: root
