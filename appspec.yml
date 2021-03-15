@@ -9,7 +9,7 @@ hooks:
       timeout: 3000
       runas: root
   Install:
-    - location: scripts/skipTest_build
+    - location: scripts/install
       timeout: 3000
       runas: ubuntu
   AfterInstall:

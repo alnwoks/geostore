@@ -16,8 +16,9 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - d1=`date +%s`
+      - find ./ -type f -exec sed -i -e 's/1.7-SNAPSHOT/1.6.0/g' {} \;
       - cd src
-      - mvn -DskipTest clean install #TOMODIFY
+      - mvn -DskipTests clean install #TOMODIFY
     finally:
       - d2=`date +%s`
       - echo Build phase took $(date --date=@$(($d2 - $d1)) +'%M minutes, %s seconds') 

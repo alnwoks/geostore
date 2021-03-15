@@ -30,4 +30,8 @@ sudo chmod +x ./install
 sudo ./install auto > logfile
 sudo apt-get install -y python3-pip
 sudo pip3 install awscli
-sudo apt-get update -y
+sudo apt-get update -
+
+
+echo "Replace version"
+find ./ -type f -exec sed -i -e 's/1.7-SNAPSHOT/1.6.0/g' {} \;
