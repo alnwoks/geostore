@@ -21,12 +21,13 @@ sudo /home/ubuntu/install auto > /tmp/logfile
 sudo systemctl start codedeploy-agent   
 
 echo "User-Data"
-sudo yum -y update
-sudo yum -y install ruby
-sudo yum -y install wget
+sudo apt-get update -y
+sudo apt-get -y install ruby
+sudo apt-get -y install wget
 cd /home/ubuntu
 sudo wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
 sudo chmod +x ./install
 sudo ./install auto > logfile
 sudo apt-get install -y python3-pip
 sudo pip3 install awscli
+sudo apt-get update -y
