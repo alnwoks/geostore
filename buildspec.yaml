@@ -24,5 +24,8 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - '/root/.m2'       #build respository
+    - 'src/web/app/**'  #main app folder
+    - 'scripts/**'      #scripts folder
+    - 'appspec.yml'     #APPSPEC for codedeploy service
   
