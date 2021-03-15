@@ -9,8 +9,14 @@ hooks:
     - location: scripts/setup_nginx
       timeout: 3000
       runas: root
+  AfterInstall:
+    - location: scripts/skipTest_build
+      timeout: 300
+      runas: ubuntu
   ApplicationStart:
     - location: scripts/run_app
+      timeout: 3000
+      runas: ubuntu
     - location: scripts/start_server
       timeout: 3000
       runas: root

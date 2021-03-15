@@ -8,5 +8,3 @@ sudo apt-get install -y wget
 sudo apt-get net-tools -y
 sudo apt-get install -y ruby-full
 
-echo "Build Project"
-sudo mvn -DskipTest clean install
