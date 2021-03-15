@@ -17,7 +17,7 @@ phases:
       - echo Build started on `date`
       - d1=`date +%s`
       - cd src
-      - mvn clean install
+      - mvn -DskipTest clean install
     finally:
       - d2=`date +%s`
       - echo Build phase took $(date --date=@$(($d2 - $d1)) +'%M minutes, %s seconds') 

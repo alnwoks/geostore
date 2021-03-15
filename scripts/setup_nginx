@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Setting up NGINX..." 
-sudo mv ../nginx/default.conf /etc/nginx/conf.d/default.conf
+sudo mv /home/ubuntu/nginx/default.conf /etc/nginx/conf.d/default.conf
 #sudo nginx -s reload
