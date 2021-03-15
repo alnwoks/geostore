@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "Build Project"
 cd src
-sudo mvn -DskipTest clean install
+#sudo mvn -DskipTest clean install
+pwd
