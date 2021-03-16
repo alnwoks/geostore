@@ -1,6 +1,14 @@
 #!/bin/bash
+echo "Stopping NGINX..."
 isExistApp = `pgrep nginx`
 if [[ -n  $isExistApp ]]; then
     systemctl stop nginx        
 fi
+
+echo "Stopping Java Process..."
+jettyPid = `pgrep java`
+if [[ -n  $isExistApp ]]; then
+    kill jettyPid     
+fi
+
 
