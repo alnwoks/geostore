@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Running Application..."
 cd /home/ubuntu/src/web/app
-sudo mvn jetty:run
+sudo mvn jetty:run > /home/ubuntu/runlog
